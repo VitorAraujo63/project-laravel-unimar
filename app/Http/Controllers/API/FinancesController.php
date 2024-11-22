@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Finances;
 
 class FinancesController extends Controller
 {
@@ -12,7 +13,7 @@ class FinancesController extends Controller
      */
     public function index()
     {
-        //
+        return json_encode(Finances::all());
     }
 
     /**
